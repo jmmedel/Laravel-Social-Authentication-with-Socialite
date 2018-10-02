@@ -306,3 +306,7 @@ resources/views/facebook.blade.php
 @endsection
 
 ```
+
+17. Ok, now you are ready to use open your browser and check here : URL + '/facebook'.
+
+I hope it can help you.....

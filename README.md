@@ -11,13 +11,14 @@ Laravel Social Authentication with Socialite
 - [X]  Migrating the Database 
 - [X]  Fix the Error of there is and Error about Specified key was too long error
 - [X]  If there is no error all fix and try the login page reset all the migration 
-- [X] Edit the migration for twiiter 
+- [X] Edit the migration for twiiter github facebook 
 - [X] add provider and provider_id to the list of mass assignable attributes in the User model.
 
 
 - [X] Add socialite package 
 - [X]  register the Laravel\Socialite\SocialiteServiceProvider in your config/app.php
 - [X] Then add the Socialite facade to the aliases array in your app configuration file:
+- [X] App registration
 - [X] 
 
 
@@ -121,6 +122,15 @@ protected $fillable = [
 
 ```
 
+
+15. App registration
+The next step is to add the credentials for the OAuth services the application utilizes. These credentials should be placed in your config/services.php configuration file. In this app we are going to use Twitter, Github and Facebook.
+
+Let's start by registering our app on Twitter so we can get the client id and secret. We should also set the callback URL for our app. Visit this link to register your new app. Note, you have to be logged in in order to register an app on Twitter.
+
+Set the callback URL to http://localhost:8000/auth/twitter/callback. Once the app has been created click on the keys and access tokens tab to get your Consumer API Key and Consumer API secret. Add Twitter as a service in your config/services.php file:
+
+config/services.php
 
 
 

@@ -16,7 +16,10 @@ Laravel Social Authentication with Socialite
 
 
 - [X] Add socialite package 
-- [X]
+- [X]  register the Laravel\Socialite\SocialiteServiceProvider in your config/app.php
+- [X] Then add the Socialite facade to the aliases array in your app configuration file:
+- [X] 
+
 
 
 
@@ -91,6 +94,35 @@ protected $fillable = [
     ];
 
 ```
+
+13. config/app.php
+```
+
+'providers' => [
+    // Other service providers...
+
+    Laravel\Socialite\SocialiteServiceProvider::class,
+],
+
+```
+
+14. config/app.php
+
+
+```
+
+
+'aliases' => [
+    // Other aliases...
+
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+],
+
+
+```
+
+
+
 
 
 
